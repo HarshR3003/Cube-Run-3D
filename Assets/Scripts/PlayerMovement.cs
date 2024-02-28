@@ -10,11 +10,11 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         rb.AddForce(0, 0, front*Time.deltaTime);
-        if (Input.GetKey("d"))
+        if (Input.GetKey("d")|| Input.GetKey("right"))
         {
             rb.AddForce(side * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
-        if (Input.GetKey("a"))
+        if (Input.GetKey("a")|| Input.GetKey("left"))
         {
             rb.AddForce(-1 * side * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
